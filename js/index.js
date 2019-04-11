@@ -70,8 +70,14 @@ navigation.forEach((item, index) => {
 
 const parent = document.querySelector(".container header nav");
 const anchor = document.createElement("a");
+const anchor2 = document.createElement("a");
+anchor.textContent = "Prepend";
+anchor.style.color = "#008000";
 parent.prepend(anchor);
-anchor.append("Prepend");
+anchor2.textContent = "AppendChild";
+anchor2.style.color = "#008000";
+parent.appendChild(anchor2);
+
 console.log(parent);
 
 navigation.forEach(element => {
