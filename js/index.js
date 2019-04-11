@@ -67,7 +67,16 @@ navigation.forEach((item, index) => {
   console.log(item, index);
   item.textContent = navbarItems[index];
 });
-console.log(navigation);
+
+const parent = document.querySelector(".container header nav");
+const anchor = document.createElement("a");
+parent.prepend(anchor);
+anchor.append("Prepend");
+console.log(parent);
+
+navigation.forEach(element => {
+  element.style.color = "#008000";
+});
 
 const domAws = document.querySelector(".cta-text h1");
 domAws.textContent = siteContent["cta"]["h1"];
